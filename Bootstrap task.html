@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="images/faviconico.jpg">
+    <link rel="stylesheet" href="task2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <style>
+        body {
+            background-color: #f3f3f3;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .primarytextcolor {
+            color: #676a6c;
+        }
+
+        .friend {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-size: cover;
+        }
+
+        #greencircle {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: green;
+            display: inline-block;
+        }
+
+        #profileimage {
+            background-image: url("images/man\'s_photo.avif");
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .innercommentprofilepicture {
+            height: 30px;
+            width: 30px;
+            background-size: cover;
+            margin-right: 0.5rem;
+            display: flex;
+        }
+
+        #verticalline {
+            width: 10px;
+            background-color: #e7eaec;
+            display: inline-block;
+            margin-right: 25px;
+        }
+
+        #addcomment {
+            height: 5rem;
+            width: 90%;
+        }
+
+        .commentreply {
+            position: relative;
+            width: 90%;
+        }
+
+        .documentdownloadbutton {
+            background-color: #1c84c6;
+            height: 35px;
+            width: 140px;
+            font-size: 13px;
+            border: none;
+            color: white;
+            border-radius: 3px;
+        }
+
+        .moreinfobutton {
+            height: 35px;
+            width: 80px;
+            font-size: 13px;
+            background-color: #1ab394;
+            border: none;
+            color: white;
+            border-radius: 3px;
+        }
+
+        .triangle {
+            display: inline-block;
+            left: 4px;
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-right: 12px solid #ffffff;
+            border-bottom: 12px solid transparent;
+        }
+
+        #triangle1::before {
+            content: "💼";
+            font-size: 20px;
+            background-color: #1ab394;
+            padding: 8px;
+            border-radius: 50%;
+            position: relative;
+            right: 48px;
+            bottom: 10px;
+        }
+
+
+
+        #triangle2::before {
+            content: "📄";
+            font-size: 20px;
+            background-color: #1c84c6;
+            padding: 8px;
+            border-radius: 50%;
+            position: relative;
+            right: 48px;
+            bottom: 10px;
+        }
+
+        .addshadow {
+            box-shadow: 2px 2px 5px grey;
+        }
+
+        .friend {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="m-2">
+    <section id="uppersection" class="">
+
+        <div id="upperdiv" class="container-fluid flex-sm-row hstack gap-3">
+            <div id="profile" class="container d-md-flex d-sm-flex-col">
+                <div id="circularimage" class="d-sm-flex-col justify-content-center"><img src="images/man's_photo.avif"
+                        class="img rounded-circle border border-5 border-white p-1 bg-white d-sm-flex-col align-items-center"
+                        height="110px" width="110px"></div>
+                <div id="profiledetails" class="container d-flex-row d-md-flex-col">
+                    <h1 id="name" class="fs-1 fw-lighter mb-0">Alex Smith</h1>
+                    <h3 id="position" class="fs-6 fw-bold ">Founder of groupeq</h3>
+                    <span id="profileinfo" class="fs-6 primarytextcolor">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Totam quia asperiores assumenda dis id, voluptatem provident eveniet nihil
+                        Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Sint saepe ducimus est ut quisquam incidunt
+
+                    </span>
+                </div>
+            </div>
+            <div id="tableandgraph" class="container d-flex flex-wrap justify-content-evenly ">
+                <div id="statstablediv" class="d-flex">
+                    <table id="statstable" class="d-inline-block border-collapse">
+                        <tr class="border-top">
+                            <td class="pt-2 pb-2 ps-2 pe-2 fs-6"><b>142</b> Projects</td>
+                            <td class="pt-2 pb-2 ps-2 pe-2 fs-6"><b>22</b> Followers</td>
+                        </tr>
+
+                        <tr class="border-top">
+                            <td class="pt-2 pb-2 ps-2 pe-2 fs-6"><b>61</b> Comments</td>
+                            <td class="pt-2 pb-2 ps-2 pe-2 fs-6"><b>54</b> Articals</td>
+                        </tr>
+                        <tr class="border-top">
+                            <td class="pt-2 pb-2 ps-2 pe-2 fs-6"><b>152</b> Tags</td>
+                            <td class="pt-2 pb-2 ps-2 pe-2 fs-6"><b>32</b> Friends</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="fullgraph" class="d-flex-col  ms-3">
+                    <div id="graphinfo">
+                        <div id="graphdata1" class="fs-6 primarytextcolor">Sales in last 24h</div>
+                        <div id="graphdata2" class="fs-2 primarytextcolor">206 480</div>
+                    </div>
+                    <canvas id="myChart" class="w-100 h-20"></canvas>
+                    <script>
+                        const xValues = [200000, 400000, 800000, 1000000, 1400000, 1600000, 1800000, 200000, 206480];
+                        const yValues = [16, 18, 22, 18, 15, 16, 23, 15, 23,];
+
+                        new Chart("myChart", {
+                            type: "line",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    fill: false,
+                                    lineTension: 0,
+                                    backgroundColor: "#1ab394",
+                                    borderColor: "#1ab394",
+                                    data: yValues
+                                }]
+                            },
+                            options: {
+                                legend: { display: false },
+                                scales: {
+                                    xAxes: [{ display: false }],
+                                    yAxes: [{ display: false, ticks: { min: 10, max: 24 } }]
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="lowersection" class="">
+        <!-- left div -->
+        <div id="lowerdiv" class="container-fluid">
+            <div class="row justify-content-evenly">
+                <div class="col-lg-3 ">
+                    <section id="left" class="row-sm mb-3">
+                        <section id="aboutalexsmith">
+                            <div id="leftdiv1" class="container d-flex-lg-col flex-wrap bg-white p-4 mb-4 addshadow">
+                                <h4 class="primarytextcolor">About Alex Smith</h4>
+                                <div class="primarytextcolor mb-2">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Eligendi exercitationem, Lorem ipsum dolor sit, amet consectetur
+
+                                    <div id="seconddetail" class="primarytextcolor mb-3">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur
+                                        adipisicing elit. Eligendi exercitationem, consequuntur alias provident.
+                                    </div>
+                                    <div id="onlinestatus" class="d-flex-row">
+                                        <div id="greencircle"></div>
+                                        <span id="status" class="primarytextcolor"><b>Online status</b></span>
+                                    </div>
+                                </div>
+                        </section>
+                        <section id="friendsandfollowers">
+                            <div id="leftdiv2" class="container d-flex-lg-col flex-wrap p-2 bg-white p-4 addshadow">
+                                <h4 class="about primarytextcolor">Followers and Friends</h4>
+                                <div class="aboutinfo1 sm primarytextcolor mb-3">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Eligendi exercitationem, consequuntur alias provident
+                                </div>
+                                <div id="fnf" class="">
+                                    <div class="friend" style="background-image: url(images/friend1.jpeg);"></div>
+                                    <div class="friend" style="background-image: url(images/friend2.jpeg);"></div>
+                                    <div class="friend" style="background-image: url(images/friend3.jpeg);"></div>
+                                    <div class="friend" style="background-image: url(images/friend4.jpeg);"></div>
+                                    <div class="friend" style="background-image: url(images/friend5.jpeg);"></div>
+                                    <div class="friend" style="background-image: url(images/friend6.jpeg);"></div>
+                                    <div class="friend" style="background-image: url(images/friend7.jpeg);"></div>
+                                    <div class="friend" style="background-image: url(images/friend8.jpeg);"></div>
+                                    <div class="friend" style="background-image: url(images/friend9.jpeg);"></div>
+                                    <div class="friend" style="background-image: url(images/friend10.jpeg);"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+
+                <!-- center div -->
+
+                <div class="col-lg-5 mb-4">
+                    <div id="centerdiv" class="">
+                        <section id="centersection">
+                            <div id="centerdiv1" class="bg-white p-4 addshadow">
+                                <div id="accountdiv" class="d-flex">
+                                    <div id="accountleftside" class="container d-flex mb-2">
+                                        <div id="profileimage" class="me-2"></div>
+                                        <div id="accountinfo" class="">
+                                            <div id="accountname"><a href="#" class="md-2 fs-5">Andrew Williams</a>
+                                            </div>
+                                            <div id="dateandtime" class="sm-2 fs-6 primarytextcolor">Today 4:21 pm -
+                                                12.06.2014</div>
+                                        </div>
+                                    </div>
+                                    <button id="commentbutton" style="height: 2rem;width: 2rem;">&#11167;</button>
+                                </div>
+                                <div id="comment" class="mb-2 fs-6 primarytextcolor p-2">
+                                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus soluta
+                                        provident
+                                        eius dicta porro reprehenderit doloremque tempore ducimus nam iure alias,
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum dolore
+                                        accusantium incidunt vel ea natus?
+                                    </span>
+                                </div>
+                                <div id="reactionbuttons p-2">
+                                    <button id="likebutton"><i
+                                            class="fa fa-thumbs-up primarytextcolor border-white"></i> Like
+                                        this</button>
+                                    <button id="commenrtbutton"><i class="fa fa-comments-o primarytextcolor"></i>
+                                        Comments</button>
+                                    <button id="sharebutton"><i class="fa fa-share-alt primarytextcolor"></i>
+                                        share</button>
+                                </div>
+                            </div>
+                            <div id="centerdiv2" class="bg-light p-2 d-flex-col addshadow">
+                                <div class="innercomment d-flex" style="margin-bottom: 20px;">
+                                    <div class="innercommentprofilepicture d-inline-block"
+                                        style="background-image: url(images/friend3.jpeg);">
+                                    </div>
+                                    <div class="commentreply">
+                                        <a class="md replyusername" href="#">Andrew Williams</a>
+                                        <span class="text-sm fs-6 primarytextcolor">Lorem ipsum dolor sit amet
+                                            consectetur
+                                            adip Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+                                            dolore.
+                                            elit. Eaque expedita
+                                        </span><br>
+                                        <a href="#" class="colmmentlikebutton"><i class="fa fa-thumbs-up"> 11 Liked
+                                                this! </i>
+                                        </a>
+                                        <span class="sm primarytextcolor"> - 10.06.2014</span>
+                                    </div>
+                                </div>
+                                <div class="innercomment d-flex" style="margin-bottom: 20px;">
+                                    <div class="innercommentprofilepicture d-inline-block"
+                                        style="background-image: url(images/friend3.jpeg);">
+                                    </div>
+                                    <div class="commentreply ms-0">
+                                        <a class="md replyusername" href="#">Andrew Williams</a>
+                                        <span class="sm primarytextcolor fs-6">Lorem ipsum dolor sit amet consectetur
+                                            adipisicing
+                                            elit. Eaque expedita
+                                            officia temporibus nulla ab maiores quod ex eos repellat
+                                            laboriosam?</span><br>
+                                        <a href="#" class="colmmentlikebutton"><i class="fa fa-thumbs-up"> 11 Liked
+                                                this! </i>
+                                        </a>
+                                        <span class="sm primarytextcolor"> - 10.06.2014</span>
+                                    </div>
+                                </div>
+                                <div class="innercomment d-flex" style="margin-bottom: 20px;">
+                                    <div class="innercommentprofilepicture"
+                                        style="background-image: url(images/friend3.jpeg);">
+                                    </div>
+                                    <textarea id="addcomment" placeholder="Write a comment" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- right div -->
+
+                <div class="col-lg-4 ps-4">
+                    <div id="entirerightdiv" class="d-flex">
+                        <div id="verticalline"></div>
+                        <div id="rightdiv" class="d-flex-col justify-content-evenly">
+                            <div id="extra-1" class="d-flex">
+                                <div id="triangle1" class="triangle"></div>
+                                <div id="entirerightdiv1" class="bg-white p-4 d-flex mb-4">
+                                    <div id="rightdiv1">
+                                        <div id="meeting">
+                                            <h4 class=" primarytextcolor">Meeting</h4>
+                                            <div id="meetingdetails" class="fs-6 primarytextcolor mb-4">Lorem ipsum
+                                                dolor sit
+                                                amet
+
+                                                adipisci dolorem
+                                                impedit Lorem ipsum dolor it.ipsa explicabo sed nulla reiciendis dolore
+                                                cum.</div>
+                                            <div class="d-flex  justify-content-between">
+                                                <div class="d-flex-col">
+                                                    <div class="d-block">Today</div>
+                                                    <div class="d-block" style="color: #1ab394;">Dec 24</div>
+                                                </div>
+                                                <button class="moreinfobutton">More info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="extradiv" class="d-flex">
+                                <div id="triangle2" class="triangle"></div>
+                                <div id="entirerightdiv2" class="bg-white p-4 d-flex">
+                                    <div id="meeting">
+                                        <h4 class="about primarytextcolor">Send Documents to Mike</h4>
+                                        <div id="mb-2" class="fs-6 primarytextcolor mb-4">Lorem ipsum dolor
+                                            sit
+                                            amet
+                                            consectetur
+
+                                            adipisci
+                                            dolorem
+                                            impedit Lorem ipsum dolor it.ipsa explicabo sed nulla reiciendis dolore
+                                            cum.
+                                        </div>
+                                        <div class="d-flex  justify-content-between">
+                                            <div class="d-flex-col">
+                                                <span class="d-block">Today</span>
+                                                <span class="d-block" style="color: #1ab394;">Dec 26</span>
+                                            </div>
+                                            <button class="documentdownloadbutton">Download Document</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

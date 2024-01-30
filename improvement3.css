@@ -1,0 +1,592 @@
+/* :root {
+    --primary-color: #f3f3f4;
+    --primary-text: #676a6c;
+    --green: #1AB394;
+    --green-2: #62cab5;
+    --blue: #1c84c6;
+    --fontsize-sm: 1rem;
+    --fontsize-sm-2: 0.75rem;
+    --fontsize-md: 0.9rem;
+    --fontsize-md-2: 1.0625rem;
+
+    --fontsize-lg: 1.875rem;
+} */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.primarytextcolor {
+    color: #676a6c;
+}
+
+.sm {
+    font-size: 1rem;
+}
+
+.sm-2 {
+    font-size: 0.75rem;
+}
+
+.md {
+    font-size: 0.9rem;
+}
+
+.md-2 {
+    font-size: 1.0625rem;
+}
+
+.lg {
+    font-size: 1.875rem;
+}
+
+body {
+    margin: 2rem;
+    background-color: #f3f3f3;
+}
+
+#upperdiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+    /* margin-bottom: 2rem; */
+}
+
+#profile {
+    display: flex;
+}
+
+#circularimage {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-image: url("images/man\'s_photo.avif");
+    background-size: cover;
+    display: inline-block;
+    border: 10px solid white;
+}
+
+#profiledetails {
+    margin-left: 1rem;
+    width: 40vw;
+}
+
+#position {
+    margin-bottom: 0.5rem;
+}
+
+#tableandgraph{
+    display: flex;
+    /* height: min-content; */
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+    padding: 0px;
+    width: 50vw;
+}
+
+/* #statstablediv {
+    margin: 5px;
+    display:inline-block;
+
+} */
+
+#statstable {
+    border-collapse: collapse;
+
+}
+
+tr {
+    border-top: 1px solid gray;
+    border-width: 100%;
+}
+
+
+td,
+tr {
+    padding: 0.625rem 6vw 0.625rem 0.3125rem;
+}
+
+td,
+strong {
+    font-size: small;
+}
+
+#fullgraph{
+    display: flex;
+    flex-direction: column;
+}
+
+#graphinfo{
+    display: flex;
+    flex-direction: column;
+}
+#graph{
+    height:min-content;
+    width: 10%;
+    background-color: yellow;
+    display: inline-block;
+    position: relative;
+    bottom: 50px;
+}
+#graphdata1{
+    margin-bottom: 5px;
+}
+
+#lowerdiv {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+#leftdiv {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#leftdiv1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#leftdiv1,#leftdiv2 {
+    box-shadow: 2px 2px 5px grey;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.about {
+    margin-bottom: 2rem;
+    font-size: larger;
+}
+
+.aboutinfo1 {
+    margin-bottom: 0.5rem;
+}
+
+#seconddetail{
+    margin-bottom: 1rem;
+}
+
+#greencircle {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: green;
+    display: inline-block;
+}
+
+#fnf{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.friend{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+#centerdiv{
+    margin-left: 35px;
+    box-shadow: 2px 2px 5px grey;
+    width: 40%;
+    height: max-content;
+
+}
+
+#centerdiv1{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+#accountdiv{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#accountinfo{
+    display: grid;
+    margin-left: 1rem;
+    
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+}
+
+#accountname{
+    margin-bottom: 0.3rem;
+}
+
+#accountleftside{
+    display: flex;
+}
+
+#profileimage{
+    background-image: url("images/man\'s_photo.avif");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+#commentbutton {
+    height: 30px;
+    width: 40px;
+    font-size: 20px;
+}
+
+#comment{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+#centerdiv2{
+    background-color:#f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.commentreply{
+    position: relative;
+    width: 90%;
+}
+
+.innercomment{
+    display: flex;
+    flex-direction: row;
+}
+
+.innercommentprofilepicture{
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    margin-right: 0.5rem;
+    display: flex;
+}
+
+#addcomment{
+    margin-bottom: 1rem;
+    height: 5rem;
+    width: 90%;
+}
+
+#entirerightdiv{
+    display: flex;
+    flex-direction: row;
+    margin-left: 35px;
+    width: 30%;
+}
+
+#verticalline{
+    width: 9px;
+    background-color: #e7eaec;
+    display: inline-block;
+    margin-right: 35px;
+}
+
+
+#rightdiv{
+    display: flex;
+    flex-direction: column;
+}
+
+#rightdiv1,#rightdiv2{
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#triangle1::before{
+    content: "💼";
+    font-size: 15px;
+    background-color: #1ab394;
+    padding: 8px;
+    border-radius: 50%;
+    position: relative;
+    right: 56px;
+    bottom: 10px;
+}
+
+
+
+#triangle2::before{
+    content: "📄";
+    font-size: 15px;
+    background-color: #1c84c6;
+    padding: 8px;
+    border-radius: 50%;
+    position: relative;
+    right: 56px;
+    bottom: 10px;
+}
+
+.triangle{
+    display: inline-block;
+    left: 4px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-right: 12px solid #ffffff;
+    border-bottom: 12px solid transparent;
+}
+
+#meeting{
+    display: inline-block;
+    padding: 15px;
+}
+
+#triangle::before{
+    content: '';
+}
+
+.meetingdateandtime{
+    display:flex;
+    flex-direction: column;
+}
+.meetinginfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.meetingdate{
+    color: #1AB394;
+}
+
+.moreinfobutton {
+    height: 35px;
+    width: 80px;
+    font-size: 13px;
+    background-color: #1ab394;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+#meetingdetails{
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+#meetingtitle{
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.documentdownloadbutton {
+    background-color: #1c84c6;
+    height: 35px;
+    width: 140px;
+    font-size: 13px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+.righttitle{
+    font-weight: bold;
+    font-size: 20px;
+    color: #6f7273;
+}
+
+#entirerightdiv1,#entirerightdiv2{
+    display: flex;
+}
+
+@media screen and (min-width:1440px) {
+
+    #upperdiv {
+        display: flex;
+        flex-direction: row;
+        /* margin-bottom: 2rem; */
+    }
+    #profiledetails {
+        margin-left: 1rem;
+        width: 35vw;
+    }
+}
+@media screen and (max-width:1355px) { 
+    #upperdiv {
+        justify-content: center;
+    }
+    #upperdiv{
+        justify-content: center;
+    }
+    #tableandgraph{
+        width: 100%;
+        padding: 2rem;
+        justify-content: space-between;
+    }
+    
+}
+
+@media screen and (max-width:1025px) {
+    #lowerdiv {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #entirerightdiv{
+        display: flex;
+        flex-direction: row;
+        margin-left: 35px;
+        width: 95%;
+    }
+    #centerdiv{
+        margin-bottom: 35px;
+        margin-left: 0px;
+        box-shadow: 2px 2px 5px grey;
+        width: 100%;
+        height: max-content;
+    
+    }
+    #leftdiv{
+        width: 100%;
+    }
+    #left {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    #leftdiv1,#leftdiv2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    #leftdiv1{
+        margin-right: 1.5rem;
+    }
+    #entirerightdiv{
+        width: 100%;
+        margin-left: 0px;
+    }
+    #upperdiv{
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    #tableandgraph{
+        width: 100%;
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #profile{
+        flex-direction: column;
+        /* align-items: center; */
+        /* align-content: center; */
+    }
+    /* #entiregraph{
+        margin-left: 1.5rem;
+    } */
+
+}
+
+@media screen and (max-width:768px) {
+    #upperdiv {
+        align-items: center;
+        justify-content: center;
+    }
+    #entirerightdiv{
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width:610px) {
+    #upperdiv {
+        align-items: center;
+        justify-content: center;
+    }
+    #tableandgraph{
+        width: 50%;
+        justify-content: center;
+    }
+    #entirerightdiv{
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:426px) {
+    #leftdiv{
+        width: 100%;
+    }
+    #left {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        /* margin-bottom: 2rem; */
+    }
+    #leftdiv1,#leftdiv2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%;
+    }
+    #leftdiv1{
+        margin-right: 1.5rem;
+    }
+    #leftdiv2{
+        margin-bottom: 0px;
+    }
+    #entirerightdiv{
+        width: 100%;
+        margin-left: 0px;
+    }
+    #tableandgraph{
+        padding: 0px;
+        margin-top: 1rem;
+    }
+    #tableandgraph{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        
+    }
+    #fullgraph{
+        margin-top: 20px;
+        width: 100%;
+        
+    }
+    #upperdiv{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #profiledetails{
+        width: 100%;
+    }
+    #profile{
+        flex-direction: row;
+    }
+    #circularimage{
+        width: 50%;
+    }
+    
+}

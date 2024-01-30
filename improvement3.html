@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="improvement3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>new page</title>
+</head>
+
+<body>
+    <section id="uppersection">
+        <div id="upperdiv">
+            <div id="profile">
+                <div id="circularimage" ></div>
+                <div id="profiledetails">
+                    <h1 id="name" class="lg">Alex Smith</h1>
+                    <h3 id="position" class="md-2">Founder of groupeq</h3>
+                    <span id="profileinfo" class="sm primarytextcolor">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Totam quia asperiores assumenda dis id, voluptatem provident eveniet nihil
+                        ipsa voluptatibus sit perferendis, rerum dolorem cupiditate!</span>
+                </div>
+            </div>
+            <div id="tableandgraph" >
+                <div id="statstablediv">
+                    <table id="statstable">
+                        <tr>
+                            <td class="datainleft"><strong>142</strong> Projects</td>
+                            <td class="datainright"><strong>22</strong> Followers</td>
+                        </tr>
+
+                        <tr>
+                            <td class="datainleft"><strong>61</strong> Comments</td>
+                            <td class="datainright"><strong>54</strong> Articals</td>
+                        </tr>
+                        <tr>
+                            <td class="datainleft"><strong>152</strong> Tags</td>
+                            <td class="datainright"><strong>32</strong> Friends</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="fullgraph">
+                    <div id="graphinfo">
+                        <div id="graphdata1" class="md-2 primarytextcolor">Sales in last 24h</div>
+                        <div id="graphdata2" class="lg primarytextcolor">206 480</div>
+                    </div>
+                    <canvas id="myChart"></canvas>
+                    <script>
+                        const xValues = [200000, 400000,  800000, 1000000,  1400000, 1600000, 1800000, 200000, 206480];
+                        const yValues = [16, 18, 22, 18, 15, 16, 23, 15, 23, ];
+
+                        new Chart("myChart", {
+                            type: "line",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    fill: false,
+                                    lineTension: 0,
+                                    backgroundColor: "#1ab394",
+                                    borderColor: "#1ab394",
+                                    data: yValues
+                                }]
+                            },
+                            options: {
+                                legend: { display: false },
+                                scales: {
+                                    xAxes: [{ display: false }],
+                                    yAxes: [{ display: false, ticks: { min: 10, max: 24 } }]
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <section id="lowersection">
+        <div id="lowerdiv" class="container p-0 m-0">
+
+
+            <div id="leftdiv">
+                <section id="left">
+                    <section id="aboutalexsmith">
+                        <div id="leftdiv1">
+                            <h4 class="about primarytextcolor">About Alex Szmith</h4>
+                            <div class="aboutinfo1 sm primarytextcolor">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Eligendi exercitationem, Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit.
+                                , placeat corrupti nesciunt repudiandae atque, molestiae
+                                quas?</div>
+                            <div id="seconddetail" class="aboutinfo1 sm primarytextcolor">Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit. Eligendi exercitationem, consequuntur alias provident.
+                            </div>
+                            <div id="onlinestatus">
+                                <div id="greencircle"></div>
+                                <span id="status" class="sm primarytextcolor"><b>Online status</b></span>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="friendsandfollowers">
+                        <div id="leftdiv2">
+                            <h4 class="about primarytextcolor">Followers and Friends</h4>
+                            <div class="aboutinfo1 sm primarytextcolor">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Eligendi exercitationem, consequuntur alias provident voluptatem
+                                Lorem ipsum. Ullam rerum, obcaecati facere minima ea vero, voluptas fugit eligendi,
+                                culpa nostrum!
+                            </div>
+                            <div id="fnf">
+                                <div class="friend" style="background-image: url(images/friend1.jpeg);"></div>
+                                <div class="friend" style="background-image: url(images/friend2.jpeg);"></div>
+                                <div class="friend" style="background-image: url(images/friend3.jpeg);"></div>
+                                <div class="friend" style="background-image: url(images/friend4.jpeg);"></div>
+                                <div class="friend" style="background-image: url(images/friend5.jpeg);"></div>
+                                <div class="friend" style="background-image: url(images/friend6.jpeg);"></div>
+                                <div class="friend" style="background-image: url(images/friend7.jpeg);"></div>
+                                <div class="friend" style="background-image: url(images/friend8.jpeg);"></div>
+                                <div class="friend" style="background-image: url(images/friend9.jpeg);"></div>
+                                <div class="friend" style="background-image: url(images/friend10.jpeg);"></div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+
+
+            <div id="centerdiv">
+                <section id="centersection">
+                    <div id="centerdiv1">
+                        <div id="accountdiv">
+                            <div id="accountleftside">
+                                <div id="profileimage"></div>
+                                <div id="accountinfo">
+                                    <div id="accountname"><a href="#" class="md-2">Andrew Williams</a></div>
+                                    <div id="dateandtime" class="sm-2 primarytextcolor">Today 4:21 pm - 12.06.2014</div>
+                                </div>
+                            </div>
+                            <button id="commentbutton">&#11167;</button>
+                        </div>
+                        <div id="comment" class="mb-2 primarytextcolor">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus soluta provident
+                                eius dicta porro reprehenderit doloremque tempore ducimus nam iure alias, maiores
+                                consectetur fugit laudantium assumenda consequuntur esse aut cum!</span>
+                        </div>
+                        <div id="reactionbuttons">
+                            <button id="likebutton"><i class="fa fa-thumbs-up primarytextcolor"></i> Like this</button>
+                            <button id="commenrtbutton"><i class="fa fa-comments-o primarytextcolor"></i>
+                                Comments</button>
+                            <button id="sharebutton"><i class="fa fa-share-alt primarytextcolor"></i> share</button>
+                        </div>
+                    </div>
+                    <div id="centerdiv2" >
+                        <div class="innercomment" style="margin-bottom: 20px;">
+                            <div class="innercommentprofilepicture" style="background-image: url(images/friend3.jpeg);">
+                            </div>
+                            <div class="commentreply">
+                                <a class="md replyusername" href="#">Andrew Williams</a>
+                                <span class="sm primarytextcolor">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Eaque expedita
+                                    officia temporibus nulla ab maiores quod ex eos repellat laboriosam?</span><br>
+                                <a href="#" class="colmmentlikebutton"><i class="fa fa-thumbs-up"> 11 Liked this! </i>
+                                </a>
+                                <span class="sm primarytextcolor"> - 10.06.2014</span>
+                            </div>
+                        </div>
+                        <div class="innercomment" style="margin-bottom: 20px;">
+                            <div class="innercommentprofilepicture" style="background-image: url(images/friend3.jpeg);">
+                            </div>
+                            <div class="commentreply">
+                                <a class="md replyusername" href="#">Andrew Williams</a>
+                                <span class="sm primarytextcolor">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Eaque expedita
+                                    officia temporibus nulla ab maiores quod ex eos repellat laboriosam?</span><br>
+                                <a href="#" class="colmmentlikebutton"><i class="fa fa-thumbs-up"> 11 Liked this! </i>
+                                </a>
+                                <span class="sm primarytextcolor"> - 10.06.2014</span>
+                            </div>
+                        </div>
+                        <div class="innercomment" style="margin-bottom: 20px;">
+                            <div class="innercommentprofilepicture" style="background-image: url(images/friend3.jpeg);">
+                            </div>
+                            <textarea id="addcomment" placeholder="Write a comment" rows="5"></textarea>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="entirerightdiv">
+                <div id="verticalline"></div>
+                <div id="rightdiv">
+                    <div id="entirerightdiv1">
+                        <div id="triangle1" class="triangle"></div>
+                        <div id="rightdiv1">
+                            <div id="meeting">
+                                <div id="meetingtitle" class="righttitle primarytextcolor">Meeting</div>
+                                <span id="meetingdetails" class="sm primarytextcolor">Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Impedit cum at rerum
+                                    iure? Quo accusantium esse cumque quas consectetur perspiciatis aliquid nihil
+                                    adipisci dolorem
+                                    impedit Lorem ipsum dolor it.ipsa explicabo sed nulla reiciendis dolore molestias Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, excepturi?
+                                    cum.</span>
+                                <div class="meetinginfo">
+                                    <div class="meetingdateandtime">
+                                        <span>Today</span>
+                                        <span class="meetingdate">Dec 24</span>
+                                    </div>
+                                    <button class="moreinfobutton">More info</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="entirerightdiv2">
+                        <div id="triangle2" class="triangle"></div>
+                        <div id="rightdiv2">
+                            <div id="meeting">
+                                <div id="meetingtitle" class="righttitle primarytextcolor">Send Documents to mike</div>
+                                <span id="meetingdetails" class="sm primarytextcolor">Lorem ipsum dolor sit amet
+                                    consectetur
+                                    adipisicing elit. Impedit cum at rerum
+                                    iure? Quo accusantium esse cumque quas consectetur perspiciatis aliquid nihil
+                                    adipisci
+                                    dolorem
+                                    impedit Lorem ipsum dolor it.ipsa explicabo sed nulla reiciendis dolore molestias Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, reiciendis.
+                                    cum.</span>
+                                <div class="meetinginfo">
+                                    <div class="meetingdateandtime">
+                                        <span>Today</span>
+                                        <span class="meetingdate">Dec 26</span>
+                                    </div>
+                                    <button class="documentdownloadbutton">Download Document</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
